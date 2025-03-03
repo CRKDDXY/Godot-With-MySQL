@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4bv7uxel8jep"]
+
+[ext_resource type="Script" path="res://界面/操作记录查看/操作记录查看.cs" id="1_3aabi"]
+[ext_resource type="PackedScene" uid="uid://m13ep88aqu3p" path="res://界面/操作记录查看/单个记录.tscn" id="1_wsdkx"]
+
+[node name="操作记录查看" type="Node2D" node_paths=PackedStringArray("返回", "记录列表")]
+script = ExtResource("1_3aabi")
+"返回" = NodePath("返回")
+"记录列表" = NodePath("记录滚轮/记录列表")
+
+[node name="单个记录" parent="." instance=ExtResource("1_wsdkx")]
+
+[node name="记录滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(1152, 0)
+offset_top = 105.0
+offset_right = 1152.0
+offset_bottom = 521.0
+
+[node name="记录列表" type="GridContainer" parent="记录滚轮"]
+custom_minimum_size = Vector2(1152, 100)
+layout_mode = 2
+
+[node name="返回" type="Button" parent="."]
+offset_left = 1036.0
+offset_top = 570.0
+offset_right = 1124.0
+offset_bottom = 619.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+text = "返回"

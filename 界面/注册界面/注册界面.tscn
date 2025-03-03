@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://huok3grlqtow"]
+
+[ext_resource type="Script" path="res://界面/注册界面/register.cs" id="1_wvp3q"]
+
+[node name="注册界面" type="Node2D" node_paths=PackedStringArray("返回", "注册按钮", "用户名", "密码", "真实姓名", "年级", "提示")]
+script = ExtResource("1_wvp3q")
+"返回" = NodePath("返回")
+"注册按钮" = NodePath("注册并登录")
+"用户名" = NodePath("用户名/用户名输入框")
+"密码" = NodePath("密码/密码输入框")
+"真实姓名" = NodePath("真实姓名/真实姓名输入框")
+"年级" = NodePath("年级/年级输入框")
+"提示" = NodePath("提示")
+
+[node name="用户名" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 120.0
+offset_right = 476.0
+offset_bottom = 177.0
+theme_override_font_sizes/font_size = 55
+text = "用户名："
+metadata/_edit_use_anchors_ = true
+
+[node name="用户名输入框" type="TextEdit" parent="用户名"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 4.0
+offset_right = 616.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 45
+metadata/_edit_use_anchors_ = true
+
+[node name="密码" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 200.0
+offset_right = 476.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 55
+text = "密码："
+metadata/_edit_use_anchors_ = true
+
+[node name="密码输入框" type="TextEdit" parent="密码"]
+layout_mode = 0
+offset_left = 264.0
+offset_right = 616.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 45
+metadata/_edit_use_anchors_ = true
+
+[node name="真实姓名" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 280.0
+offset_right = 531.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 55
+text = "真实姓名："
+metadata/_edit_use_anchors_ = true
+
+[node name="真实姓名输入框" type="TextEdit" parent="真实姓名"]
+layout_mode = 0
+offset_left = 264.0
+offset_right = 616.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 45
+metadata/_edit_use_anchors_ = true
+
+[node name="年级" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 360.0
+offset_right = 421.0
+offset_bottom = 417.0
+theme_override_font_sizes/font_size = 55
+text = "年级："
+metadata/_edit_use_anchors_ = true
+
+[node name="年级输入框" type="TextEdit" parent="年级"]
+layout_mode = 0
+offset_left = 264.0
+offset_right = 616.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 45
+metadata/_edit_use_anchors_ = true
+
+[node name="注册并登录" type="Button" parent="."]
+offset_left = 319.0
+offset_top = 461.0
+offset_right = 827.0
+offset_bottom = 521.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+text = "注册并登录"
+metadata/_edit_use_anchors_ = true
+
+[node name="返回" type="Button" parent="."]
+offset_left = 1043.0
+offset_top = 588.0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 50
+text = "返回"
+
+[node name="提示" type="Label" parent="."]
+offset_left = 380.0
+offset_top = 569.0
+offset_right = 780.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 40
+text = "请按要求填写所有内容"

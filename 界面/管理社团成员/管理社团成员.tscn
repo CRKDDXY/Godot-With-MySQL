@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0jxrkvjbl4y5"]
+
+[ext_resource type="Script" path="res://界面/管理社团成员/管理社团成员.cs" id="1_mn80o"]
+
+[node name="管理社团成员" type="Node2D" node_paths=PackedStringArray("社团列表", "成员列表", "成员列表名称", "返回按钮", "权限修改提示", "改为权限1", "改为权限2")]
+script = ExtResource("1_mn80o")
+"社团列表" = NodePath("社团滚轮/社团列表")
+"成员列表" = NodePath("成员滚轮/该社团成员列表")
+"成员列表名称" = NodePath("标头/成员列表/名称")
+"返回按钮" = NodePath("返回")
+"权限修改提示" = NodePath("权限等级修改提示")
+"改为权限1" = NodePath("权限等级修改提示/权限等级1")
+"改为权限2" = NodePath("权限等级修改提示/权限等级2")
+
+[node name="标头" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(1152, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="社团名称" type="Panel" parent="标头"]
+custom_minimum_size = Vector2(576, 100)
+layout_mode = 2
+
+[node name="名称" type="Label" parent="标头/社团名称"]
+layout_mode = 0
+offset_right = 580.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 40
+text = "社团列表"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="成员列表" type="Panel" parent="标头"]
+custom_minimum_size = Vector2(576, 100)
+layout_mode = 2
+
+[node name="名称" type="Label" parent="标头/成员列表"]
+offset_right = 576.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 40
+text = "成员列表
+（）"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="社团滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(576, 0)
+offset_top = 105.0
+offset_right = 576.0
+offset_bottom = 517.0
+
+[node name="社团列表" type="GridContainer" parent="社团滚轮"]
+custom_minimum_size = Vector2(576, 100)
+layout_mode = 2
+
+[node name="成员滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(576, 0)
+offset_left = 580.0
+offset_top = 105.0
+offset_right = 1156.0
+offset_bottom = 517.0
+
+[node name="该社团成员列表" type="GridContainer" parent="成员滚轮"]
+custom_minimum_size = Vector2(576, 100)
+layout_mode = 2
+
+[node name="权限等级修改提示" type="Label" parent="."]
+offset_left = 91.0
+offset_top = 560.0
+offset_right = 251.0
+offset_bottom = 577.0
+theme_override_font_sizes/font_size = 40
+text = "是否修改社团成员的权限
+()"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="权限等级1" type="Button" parent="权限等级修改提示"]
+layout_mode = 0
+offset_left = 455.0
+offset_top = -19.9719
+offset_right = 598.0
+offset_bottom = 19.0281
+rotation = -0.00718981
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "权限等级1"
+
+[node name="权限等级2" type="Button" parent="权限等级修改提示"]
+offset_left = 455.0
+offset_top = 28.0281
+offset_right = 598.0
+offset_bottom = 67.0281
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "权限等级2"
+
+[node name="返回" type="Button" parent="."]
+offset_left = 1010.0
+offset_top = 560.0
+offset_right = 1098.0
+offset_bottom = 609.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+text = "返回
+"

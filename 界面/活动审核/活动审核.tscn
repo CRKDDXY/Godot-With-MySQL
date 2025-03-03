@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqdge7uv3srn6"]
+
+[ext_resource type="Script" path="res://界面/活动审核/活动审核.cs" id="1_j3v6n"]
+[ext_resource type="PackedScene" uid="uid://coa26ge1i2xud" path="res://界面/活动审核/单条活动记录.tscn" id="1_la7yp"]
+
+[node name="活动审核" type="Node2D" node_paths=PackedStringArray("返回", "申请活动列表")]
+script = ExtResource("1_j3v6n")
+"返回" = NodePath("返回")
+"申请活动列表" = NodePath("滚轮/申请活动列表")
+
+[node name="单条活动记录" parent="." instance=ExtResource("1_la7yp")]
+
+[node name="申请时间" parent="单条活动记录/信息列表" index="0"]
+theme_override_font_sizes/font_size = 40
+text = "申请时间"
+
+[node name="活动编号" parent="单条活动记录/信息列表" index="1"]
+theme_override_font_sizes/font_size = 40
+text = "活动编号"
+
+[node name="社团名称" parent="单条活动记录/信息列表" index="2"]
+theme_override_font_sizes/font_size = 40
+text = "社团名称"
+
+[node name="开展理据" parent="单条活动记录/信息列表" index="3"]
+theme_override_font_sizes/font_size = 40
+text = "开展理据"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="确认通过" parent="单条活动记录" index="1"]
+visible = false
+
+[node name="滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(1052, 100)
+offset_top = 106.0
+offset_right = 1152.0
+offset_bottom = 521.0
+
+[node name="申请活动列表" type="GridContainer" parent="滚轮"]
+custom_minimum_size = Vector2(1062, 100)
+layout_mode = 2
+
+[node name="返回" type="Button" parent="."]
+offset_left = 561.0
+offset_top = 588.0
+offset_right = 629.0
+offset_bottom = 627.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "返回"
+
+[editable path="单条活动记录"]

@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://leuvwj3w5oip"]
+
+[ext_resource type="Script" path="res://界面/功能选择界面/功能选择界面.cs" id="1_76m73"]
+
+[node name="功能选择界面" type="Node2D" node_paths=PackedStringArray("数据库账号管理", "数据库社团管理", "活动审核", "申请活动", "管理社团成员", "创建社团", "参报活动", "个人社团管理", "切换账号", "操作记录查看")]
+script = ExtResource("1_76m73")
+"数据库账号管理" = NodePath("滚轮框/功能列表/数据库账号管理（0）")
+"数据库社团管理" = NodePath("滚轮框/功能列表/数据库社团管理（0）")
+"活动审核" = NodePath("滚轮框/功能列表/活动审核（0）")
+"申请活动" = NodePath("滚轮框/功能列表/申请活动（1）")
+"管理社团成员" = NodePath("滚轮框/功能列表/管理社团成员（1）")
+"创建社团" = NodePath("滚轮框/功能列表/创建社团（1）")
+"参报活动" = NodePath("滚轮框/功能列表/参报活动（2）")
+"个人社团管理" = NodePath("滚轮框/功能列表/个人社团管理（2）")
+"切换账号" = NodePath("滚轮框/功能列表/切换账号（2）")
+"操作记录查看" = NodePath("滚轮框/功能列表/操作记录查看")
+
+[node name="滚轮框" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(758, 0)
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 960.0
+offset_bottom = 591.0
+vertical_scroll_mode = 3
+
+[node name="功能列表" type="GridContainer" parent="滚轮框"]
+custom_minimum_size = Vector2(768, 512)
+layout_mode = 2
+
+[node name="数据库账号管理（0）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "数据库账号管理"
+
+[node name="数据库社团管理（0）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "数据库社团管理"
+
+[node name="活动审核（0）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "活动审核"
+
+[node name="申请活动（1）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "申请活动"
+
+[node name="管理社团成员（1）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "管理社团成员"
+
+[node name="创建社团（1）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "创建社团"
+
+[node name="参报活动（2）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "参加活动"
+
+[node name="个人社团管理（2）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "个人社团管理"
+
+[node name="操作记录查看" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "操作记录查看"
+
+[node name="切换账号（2）" type="Button" parent="滚轮框/功能列表"]
+custom_minimum_size = Vector2(768, 102.4)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+text = "切换账号"

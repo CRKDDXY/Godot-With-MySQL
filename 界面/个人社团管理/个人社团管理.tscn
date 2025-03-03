@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw8fymvdniiy8"]
+
+[ext_resource type="Script" path="res://界面/个人社团管理/个人社团管理.cs" id="1_vmova"]
+
+[node name="个人社团管理" type="Node2D" node_paths=PackedStringArray("所属社团", "其他社团", "返回", "入社提示", "出社提示")]
+script = ExtResource("1_vmova")
+"所属社团" = NodePath("所属滚轮/所属社团列表")
+"其他社团" = NodePath("其他滚轮/其他社团列表")
+"返回" = NodePath("返回")
+"入社提示" = NodePath("入社提示")
+"出社提示" = NodePath("出社提示")
+
+[node name="所属滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(573, 0)
+offset_top = 105.0
+offset_right = 573.0
+offset_bottom = 520.0
+
+[node name="所属社团列表" type="GridContainer" parent="所属滚轮"]
+custom_minimum_size = Vector2(573, 0)
+layout_mode = 2
+
+[node name="其他滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(573, 0)
+offset_left = 579.0
+offset_top = 105.0
+offset_right = 1152.0
+offset_bottom = 519.0
+
+[node name="其他社团列表" type="GridContainer" parent="其他滚轮"]
+layout_mode = 2
+
+[node name="标头" type="Panel" parent="."]
+custom_minimum_size = Vector2(1152, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="列表" type="GridContainer" parent="标头"]
+custom_minimum_size = Vector2(1152, 100)
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 100.0
+columns = 2
+
+[node name="所在社团列表" type="Label" parent="标头/列表"]
+custom_minimum_size = Vector2(576, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "所属社团"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="其他社团列表" type="Label" parent="标头/列表"]
+custom_minimum_size = Vector2(576, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "其他社团
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="入社提示" type="Label" parent="."]
+offset_left = 632.0
+offset_top = 545.0
+offset_right = 877.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 35
+text = "是否进入社团？
+()"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="确认" type="Button" parent="入社提示"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = -8.0
+offset_right = 309.0
+offset_bottom = 31.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "确认
+"
+
+[node name="取消" type="Button" parent="入社提示"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 44.0
+offset_right = 309.0
+offset_bottom = 83.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "取消"
+
+[node name="出社提示" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 545.0
+offset_right = 284.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 35
+text = "是否退出社团？
+()"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="确认" type="Button" parent="出社提示"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = -8.0
+offset_right = 324.0
+offset_bottom = 31.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "确认"
+
+[node name="取消" type="Button" parent="出社提示"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 44.0
+offset_right = 324.0
+offset_bottom = 83.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "取消"
+
+[node name="返回" type="Button" parent="."]
+offset_left = 1062.0
+offset_top = 597.0
+offset_right = 1150.0
+offset_bottom = 646.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+text = "返回"

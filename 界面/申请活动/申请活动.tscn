@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2sdfjyr06qv0"]
+
+[ext_resource type="Script" path="res://界面/申请活动/申请活动.cs" id="1_w0hiu"]
+
+[node name="申请活动" type="Node2D" node_paths=PackedStringArray("返回", "拥有申请活动权限的社团列表", "确认申请", "活动申请填写提示")]
+script = ExtResource("1_w0hiu")
+"返回" = NodePath("返回")
+"拥有申请活动权限的社团列表" = NodePath("滚轮/社团列表")
+"确认申请" = NodePath("活动申请填写提示/确认申请")
+"活动申请填写提示" = NodePath("活动申请填写提示")
+
+[node name="标头" type="Panel" parent="."]
+custom_minimum_size = Vector2(576, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="标头"]
+custom_minimum_size = Vector2(576, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 16.3333
+theme_override_font_sizes/font_size = 40
+text = "拥有权限的社团"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="返回" type="Button" parent="."]
+offset_left = 1028.0
+offset_top = 574.0
+offset_right = 1116.0
+offset_bottom = 623.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+text = "返回"
+
+[node name="滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(576, 100)
+offset_top = 105.0
+offset_right = 576.0
+offset_bottom = 628.0
+
+[node name="社团列表" type="GridContainer" parent="滚轮"]
+layout_mode = 2
+
+[node name="活动申请填写提示" type="Label" parent="."]
+offset_left = 584.0
+offset_right = 1141.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 40
+text = "活动申请表
+(请先选择社团)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="开展理据提示" type="Label" parent="活动申请填写提示"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 105.0
+offset_right = 194.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 35
+text = "开展理据："
+
+[node name="理由输入框" type="TextEdit" parent="活动申请填写提示/开展理据提示"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 73.0
+offset_right = 475.0
+offset_bottom = 409.0
+theme_override_font_sizes/font_size = 25
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="确认申请" type="Button" parent="活动申请填写提示"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 553.0
+offset_right = 207.0
+offset_bottom = 606.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "确认申请"

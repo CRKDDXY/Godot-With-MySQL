@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0otrlm1m8vym"]
+
+[ext_resource type="Script" path="res://界面/创建社团/创建社团.cs" id="1_yixy0"]
+
+[node name="创建社团" type="Node2D" node_paths=PackedStringArray("社团名称", "返回按钮", "确认按钮", "提示")]
+script = ExtResource("1_yixy0")
+"社团名称" = NodePath("社团名称/社团名称输入框")
+"返回按钮" = NodePath("返回")
+"确认按钮" = NodePath("创建")
+"提示" = NodePath("提示")
+
+[node name="社团名称" type="Label" parent="."]
+offset_left = 293.0
+offset_top = 213.0
+offset_right = 518.0
+offset_bottom = 259.0
+theme_override_font_sizes/font_size = 45
+text = "社团名称："
+
+[node name="社团名称输入框" type="TextEdit" parent="社团名称"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = -3.0
+offset_right = 577.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 40
+
+[node name="创建" type="Button" parent="."]
+offset_left = 507.0
+offset_top = 376.0
+offset_right = 605.0
+offset_bottom = 430.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+text = "创建"
+
+[node name="返回" type="Button" parent="."]
+offset_left = 986.0
+offset_top = 556.0
+offset_right = 1084.0
+offset_bottom = 610.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+text = "返回"
+
+[node name="提示" type="Label" parent="."]
+offset_left = 69.0
+offset_top = 491.0
+offset_right = 629.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 50
+text = "名称不能为空！"
+horizontal_alignment = 1
+vertical_alignment = 1

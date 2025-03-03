@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh5t221ntwmgo"]
+
+[ext_resource type="Script" path="res://界面/指令显示窗口/指令显示窗口.cs" id="1_ldy0r"]
+
+[node name="指令显示窗口" type="Window" node_paths=PackedStringArray("指令提示")]
+position = Vector2i(0, 36)
+size = Vector2i(1920, 300)
+transient = true
+script = ExtResource("1_ldy0r")
+"指令提示" = NodePath("背景框/指令显示")
+
+[node name="背景框" type="Panel" parent="."]
+custom_minimum_size = Vector2(1920, 300)
+
+[node name="指令显示" type="Label" parent="背景框"]
+custom_minimum_size = Vector2(1152, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 16.3333
+theme_override_font_sizes/font_size = 25
+text = "上次执行的指令：
+"

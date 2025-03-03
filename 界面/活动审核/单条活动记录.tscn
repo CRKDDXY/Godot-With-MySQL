@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://coa26ge1i2xud"]
+
+[node name="单条活动记录" type="Panel"]
+custom_minimum_size = Vector2(1064, 100)
+offset_right = 1064.0
+offset_bottom = 100.0
+
+[node name="信息列表" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(1052, 100)
+layout_mode = 0
+offset_right = 1064.0
+offset_bottom = 100.0
+columns = 4
+
+[node name="申请时间" type="Label" parent="信息列表"]
+custom_minimum_size = Vector2(173, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="活动编号" type="Label" parent="信息列表"]
+custom_minimum_size = Vector2(173, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="社团名称" type="Label" parent="信息列表"]
+custom_minimum_size = Vector2(173, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="开展理据" type="Label" parent="信息列表"]
+custom_minimum_size = Vector2(530, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+
+[node name="确认通过" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 29.0
+offset_right = 1142.0
+offset_bottom = 68.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "通过"

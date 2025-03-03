@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3euuoak3t31q"]
+
+[ext_resource type="Script" path="res://界面/数据库账号管理/数据库账号管理.cs" id="1_and77"]
+[ext_resource type="PackedScene" uid="uid://cyn0ldl51djhe" path="res://界面/数据库账号管理/单个账号信息.tscn" id="2_px0qv"]
+
+[node name="数据库账号管理" type="Node2D" node_paths=PackedStringArray("账号信息列表", "注销操作", "权限设置", "返回上个界面", "设置权限等级1按钮", "设置权限等级2按钮")]
+script = ExtResource("1_and77")
+"账号信息列表" = NodePath("滚轮/账号信息列表")
+"注销操作" = NodePath("注销操作")
+"权限设置" = NodePath("权限设置")
+"返回上个界面" = NodePath("返回")
+"设置权限等级1按钮" = NodePath("权限设置/权限 1")
+"设置权限等级2按钮" = NodePath("权限设置/权限 2")
+
+[node name="滚轮" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(1152, 0)
+offset_top = 104.0
+offset_right = 1152.0
+offset_bottom = 516.0
+
+[node name="账号信息列表" type="GridContainer" parent="滚轮"]
+custom_minimum_size = Vector2(1152, 0)
+layout_mode = 2
+
+[node name="表头" parent="." instance=ExtResource("2_px0qv")]
+
+[node name="权限等级" parent="表头/列表" index="0"]
+text = "权限等级"
+
+[node name="用户名" parent="表头/列表" index="1"]
+text = "用户名"
+
+[node name="密码" parent="表头/列表" index="2"]
+text = "密码"
+
+[node name="真实姓名" parent="表头/列表" index="3"]
+text = "真实姓名"
+
+[node name="年级" parent="表头/列表" index="4"]
+text = "年级"
+
+[node name="返回" type="Button" parent="."]
+offset_left = 1064.0
+offset_top = 599.0
+offset_right = 1152.0
+offset_bottom = 648.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+text = "返回"
+
+[node name="注销操作" type="Label" parent="."]
+offset_top = 545.0
+offset_right = 320.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 40
+text = "是否删除该账号：
+（雷磊）"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="确认" type="Button" parent="注销操作"]
+layout_mode = 0
+offset_left = 306.0
+offset_right = 364.0
+offset_bottom = 34.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 25
+text = "确认"
+
+[node name="取消" type="Button" parent="注销操作"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 48.0
+offset_right = 364.0
+offset_bottom = 82.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 25
+text = "取消"
+
+[node name="权限设置" type="Label" parent="."]
+offset_left = 416.0
+offset_top = 545.0
+offset_right = 576.0
+offset_bottom = 586.0
+theme_override_font_sizes/font_size = 40
+text = "权限设置："
+
+[node name="权限 1" type="Button" parent="权限设置"]
+layout_mode = 0
+offset_left = 184.0
+offset_right = 317.0
+offset_bottom = 34.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 25
+text = "权限等级 1"
+
+[node name="权限 2" type="Button" parent="权限设置"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 48.0
+offset_right = 317.0
+offset_bottom = 82.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 25
+text = "权限等级 2"
+
+[editable path="表头"]

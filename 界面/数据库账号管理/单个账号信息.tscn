@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cyn0ldl51djhe"]
+
+[node name="单个账号信息" type="Panel"]
+custom_minimum_size = Vector2(1152, 100)
+offset_right = 1152.0
+offset_bottom = 100.0
+
+[node name="列表" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 5
+
+[node name="权限等级" type="Label" parent="列表"]
+custom_minimum_size = Vector2(227, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="用户名" type="Label" parent="列表"]
+custom_minimum_size = Vector2(227, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="密码" type="Label" parent="列表"]
+custom_minimum_size = Vector2(227, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="真实姓名" type="Label" parent="列表"]
+custom_minimum_size = Vector2(227, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="年级" type="Label" parent="列表"]
+custom_minimum_size = Vector2(227, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="覆盖按钮" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(1152, 100)
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 100.0
